@@ -5,14 +5,16 @@ This repo contains code for [Scraping Unstructured Data to Explore the Relations
 
 ## Data
 
-CSV formatted final datasets in the `data` folder.
+~~CSV formatted final datasets in the `data` folder.~~
+
+Update 7/23: ProMED-mail changed their data policy so I can no longer share the dataset. Please run the code to acquire your own data.
 
 Jupyter notebooks in the `notebooks` folder, mainly used for testing and analysis.
 
 ## Usage
 If you only want to scrape the data from ProMED-mail, you can run the `scrape_promed.py` script. 
 To use this, install the following packages: `requests`, `beautifulsoup4`, and `pandas`.
-Then run the following command: `python scrape_promed.py search_term`, and replace search term with what you want to search (i.e. to scrape malaria data, run `python scrape_promed.py search_term`). 
+Then run the following command: `python scrape_promed.py search_term`, and replace search term with what you want to search (i.e. to scrape malaria data, run `python scrape_promed.py 'malaria'`). 
 This will extract all articles with that search term and place them in `promed_(search_term).csv`.
 
 To run my data extraction scripts, you need to install all the packages in the `extract_data.py` file. I created an conda `environment.yml` file. If you have conda installed, just run `conda env create -f environment.yml` in the root of this repository. *Note, you will need nvidia cuda installed.* 
